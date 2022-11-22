@@ -2,6 +2,6 @@ module "hello-world" {
   source = "./modules/hello-world"
   count  = 2
 
-  cron   = "0 * * * *"
-  prefix = "hello-${count.index}"
+  cron_expression = "* * ? * * *"
+  prefix          = "hello${count.index}-"
 }
