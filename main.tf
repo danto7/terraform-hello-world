@@ -5,3 +5,7 @@ module "hello-world" {
   cron_expression = "* * ? * * *"
   prefix          = "hello${count.index}-"
 }
+
+output "hello-world-function-name" {
+  value = module.hello-world[0].function_name
+}

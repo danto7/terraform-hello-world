@@ -18,8 +18,6 @@ resource "aws_lambda_function" "fn" {
 }
 
 data "archive_file" "zip" {
-  count = var.create ? 1 : 0
-
   type        = "zip"
   output_path = "${path.module}/files/fn.zip"
 
@@ -50,7 +48,7 @@ resource "aws_iam_role" "fn" {
 data "aws_iam_policy_document" "role" {
   statement {
     effect  = "Allow"
-    actions = "sts:AssumeRole"
+    actions = ["sts:AssumeRole"]
 
     principals {
       type        = "Service"
@@ -62,7 +60,7 @@ data "aws_iam_policy_document" "role" {
 resource "aws_iam_role_policy_attachment" "basic_execution" {
   count = var.create ? 1 : 0
 
-  role       = aws_iam_role.role[0].name
+  role       = aws_iam_role.fn[0].name
   policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
 }
 
