@@ -8,7 +8,7 @@ To use this module use the example in the [main.tf](../../main.tf)
 
 ```terraform
 module "hello-world" {
-  source = "github.com/danto7/sda_coding_challenge?ref=v0.0.0"
+  source = "github.com/danto7/sda_coding_challenge?ref=v0.0.1"
 
   cron_expression = "* * ? * * *"
 }
