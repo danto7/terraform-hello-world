@@ -3,6 +3,7 @@ locals {
   zip_path      = data.archive_file.zip.output_path
 }
 
+#tfsec:ignore:aws-lambda-enable-tracing
 resource "aws_lambda_function" "fn" {
   filename         = local.zip_path
   source_code_hash = filebase64sha256(local.zip_path)
