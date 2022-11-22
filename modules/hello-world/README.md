@@ -5,7 +5,7 @@ This module creates a lambda that prints a nice message to the world.
 
 ## Usage
 
-To use this module use the example in the [main.tf](main.tf)
+To use this module use the example in the [main.tf](../../main.tf)
 
 ```terraform
 module "hello-world" {
@@ -23,7 +23,7 @@ new features can will be represented by the second digit
 and breaking changes will be represented by the first digit.
 To reference a specific version take a look at the example above.
 
-Changes will be documented in the [changelog.md](Changelog).
+Changes will be documented in the [Changelog](changelog.md).
 
 ## Requirements
 
