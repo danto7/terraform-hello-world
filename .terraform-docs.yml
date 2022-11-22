@@ -1,0 +1,8 @@
+rescursive:
+  enabled: true
+  path: modules
+formatter: markdown
+output:
+  mode: replace
+  file: README.md
+header-from: header.md

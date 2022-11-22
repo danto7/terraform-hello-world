@@ -8,3 +8,6 @@ echo "start tflint"
 tflint --module "$base_dir"/modules/*
 echo "start tfsec"
 tfsec "$base_dir"
+echo "generating docs"
+terraform-docs "$base_dir"/modules/*
+git add "$base_dir"/modules/*/README.md
