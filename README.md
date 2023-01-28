@@ -1,4 +1,4 @@
-# sda_coding_challenge
+# Terraform Hello World
 
 [Hello World module documentation](modules/hello-world/README.md)
 
